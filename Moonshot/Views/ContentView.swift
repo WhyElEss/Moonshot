@@ -19,7 +19,6 @@ struct ContentView: View {
                     Image(mission.image)
                         .resizable()
                         .scaledToFit()
-//                        .aspectRatio(contentMode: .fit)
                         .frame(width: 44, height: 44)
                     
                     VStack(alignment: .leading) {

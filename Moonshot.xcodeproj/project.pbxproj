@@ -72,17 +72,14 @@
 			children = (
 				6A484D19243210FA00FC83FB /* AppDelegate.swift */,
 				6A484D1B243210FA00FC83FB /* SceneDelegate.swift */,
-				6A484D1D243210FA00FC83FB /* ContentView.swift */,
-				6A7B6A38243646500016B5C3 /* AstronautView.swift */,
-				6AC144A32435FCBD00BFB59D /* MissionView.swift */,
+				6AED087324379D5B00F0D79E /* Views */,
 				6A484D1F243210FD00FC83FB /* Assets.xcassets */,
 				6A484D24243210FD00FC83FB /* LaunchScreen.storyboard */,
 				6A484D27243210FD00FC83FB /* Info.plist */,
 				6AD37E772433706900B18E37 /* Bundle-Decodable.swift */,
 				6AD37E7224336C5200B18E37 /* astronauts.json */,
 				6AD37E7124336C5200B18E37 /* missions.json */,
-				6AD37E7524336DC600B18E37 /* Astronaut.swift */,
-				6AD37E7924337A1800B18E37 /* Mission.swift */,
+				6AF1396D243798440017E0B9 /* Model */,
 				6A484D21243210FD00FC83FB /* Preview Content */,
 			);
 			path = Moonshot;
@@ -94,6 +91,25 @@
 				6A484D22243210FD00FC83FB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6AED087324379D5B00F0D79E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6A484D1D243210FA00FC83FB /* ContentView.swift */,
+				6A7B6A38243646500016B5C3 /* AstronautView.swift */,
+				6AC144A32435FCBD00BFB59D /* MissionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6AF1396D243798440017E0B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6AD37E7524336DC600B18E37 /* Astronaut.swift */,
+				6AD37E7924337A1800B18E37 /* Mission.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

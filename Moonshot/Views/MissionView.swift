@@ -30,6 +30,9 @@ struct MissionView: View {
                     
                     Text("Mission launch date: \(self.mission.formattedLaunchDate)")
                         .font(.headline)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading)
+                        .padding(.top)
                     
                     Text(self.mission.description)
                         .padding()
@@ -47,8 +50,14 @@ struct MissionView: View {
                                     VStack(alignment: .leading) {
                                         Text(crewMember.astronaut.name)
                                             .font(.headline)
-                                        Text(crewMember.role)
-                                            .foregroundColor(.secondary)
+                                        HStack {
+                                            Text(crewMember.role)
+                                                .foregroundColor(.secondary)
+                                            if crewMember.role == "Commander" {
+                                                Image(systemName: "star.fill")
+                                                    .foregroundColor(Color.yellow)
+                                            }
+                                        }
                                     }
                                     .padding(.horizontal)
 
