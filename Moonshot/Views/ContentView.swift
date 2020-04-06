@@ -29,8 +29,7 @@ struct ContentView: View {
                         if self.showDate {
                             Text(mission.formattedLaunchDate)
                                 .font(.subheadline)
-                        }
-                        else {
+                        } else {
                             Text(mission.crewNames(astronauts: self.astronauts))
                                 .font(.subheadline)
                         }

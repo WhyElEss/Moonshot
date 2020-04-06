@@ -32,8 +32,7 @@ struct Mission: Codable, Identifiable {
             let formatter = DateFormatter()
             formatter.dateStyle = .long
             return formatter.string(from: launchDate)
-        }
-        else {
+        } else {
             return "Date: N/A"
         }
     }
@@ -44,8 +43,7 @@ struct Mission: Codable, Identifiable {
         for member in crew {
             if let match = astronauts.first(where: { $0.id == member.name }) {
                 crewNames += match.name + String(separator)
-            }
-            else {
+            } else {
                 fatalError("Crew member \(member.name) not found")
             }
         }
