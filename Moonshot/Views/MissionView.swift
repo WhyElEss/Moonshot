@@ -71,13 +71,14 @@ struct MissionView: View {
                                         HStack {
                                             Text(crewMember.role)
                                                 .foregroundColor(.secondary)
-                                            if crewMember.role == "Commander" {
-                                                Image(systemName: "star.fill")
-                                                    .foregroundColor(Color.yellow)
-                                            }
                                         }
                                     }
                                     .padding(.horizontal)
+                                    
+                                    if crewMember.role == "Commander" {
+                                        Image(systemName: "star.fill")
+                                            .foregroundColor(Color.yellow)
+                                    }
 
                                     Spacer()
                                 }
