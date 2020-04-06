@@ -39,6 +39,21 @@ struct AstronautView: View {
                     Text(self.astronaut.description)
                         .padding()
                         .layoutPriority(1)
+                    
+                    ForEach(self.missions) { mission in
+                        HStack {
+                            Image(mission.image)
+                                .resizable()
+                            .scaledToFit()
+                                .frame(width: 75, height: 75)
+
+                            Text(mission.displayName)
+                                .font(.headline)
+
+                            Spacer()
+                        }
+                        .padding(.horizontal)
+                    }
                 }
             }
         }
