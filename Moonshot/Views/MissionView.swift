@@ -17,6 +17,24 @@ struct MissionView: View {
     let mission: Mission
     let astronauts: [CrewMember]
     
+    init(mission: Mission) {
+        self.mission = mission
+
+        var matches = [CrewMember]()
+
+        let astronauts = Astronauts.astronauts
+        for member in mission.crew {
+            if let match = astronauts.first(where: { $0.id == member.name }) {
+                matches.append(CrewMember(role: member.role, astronaut: match))
+            }
+            else {
+                fatalError("Missing \(member)")
+            }
+        }
+
+        self.astronauts = matches
+    }
+    
     var body: some View {
         GeometryReader { geometry in
             ScrollView(.vertical) {
@@ -92,10 +110,9 @@ struct MissionView: View {
 }
 
 struct MissionView_Previews: PreviewProvider {
-    static let missions: [Mission] = Bundle.main.decode("missions.json")
-    static let astronauts: [Astronaut] = Bundle.main.decode("astronauts.json")
+    static let missions: [Mission] = Missions.missions
     
     static var previews: some View {
-        MissionView(mission: missions[0], astronauts: astronauts)
+        MissionView(mission: missions[0])
     }
 }
